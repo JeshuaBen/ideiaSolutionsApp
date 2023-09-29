@@ -5,9 +5,14 @@ import * as S from "./styles";
 import Logo from "../../assets/ideialogo.png";
 import Button from "../../components/Button";
 import { Ionicons, FontAwesome } from "@expo/vector-icons";
+import { SignInProps } from "./types";
 
-const Home: React.FC = () => {
+const SignIn: React.FC = ({ navigation }: SignInProps) => {
   const theme = useTheme();
+
+  const handleNavigate = (path: "SignIn" | "RegisterPF" | "RegisterPJ") => {
+    navigation.navigate(path);
+  };
 
   return (
     <BaseLayout
@@ -25,7 +30,12 @@ const Home: React.FC = () => {
       </S.HeaderWrapper>
 
       <S.Content>
-        <Button text="Cadastrar como PF">
+        <Button
+          text="Cadastrar como PF"
+          onPress={() => {
+            handleNavigate("RegisterPF");
+          }}
+        >
           <Ionicons name="person" size={24} color={theme.COLORS.GOLD} />
         </Button>
         <Button text="Cadastrar como PJ">
@@ -49,4 +59,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default SignIn;
