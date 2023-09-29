@@ -1,19 +1,31 @@
-import { Platform } from "react-native";
+import { Alert, Platform } from "react-native";
 import * as S from "./styles";
 import { ControlRegisterPF, TRegisterPFForm } from "./types";
 import { Controller } from "react-hook-form";
 import InputBox from "../../../../components/InputBox";
 import Button from "../../../../components/Button";
 import { useTheme } from "styled-components";
+import { registerPF } from "../../../../storage/registryPF/registerPF";
+import { useNavigation } from "@react-navigation/native";
+import { RegistryPjScreenProps } from "../../../RegisterPJ/types";
 
 const RegisterPfForm = ({
   control,
   formState,
   handleSubmit,
 }: TRegisterPFForm) => {
+  const navigation = useNavigation<RegistryPjScreenProps>();
+
   const theme = useTheme();
 
-  const onSubmitValues = (data: ControlRegisterPF) => {};
+  const onSubmitValues = async (data: ControlRegisterPF) => {
+    try {
+      await registerPF(data);
+      navigation.navigation.navigate("Home");
+    } catch (error) {
+      Alert.alert(error);
+    }
+  };
 
   return (
     <>

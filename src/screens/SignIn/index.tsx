@@ -10,7 +10,9 @@ import { SignInProps } from "./types";
 const SignIn: React.FC = ({ navigation }: SignInProps) => {
   const theme = useTheme();
 
-  const handleNavigate = (path: "SignIn" | "RegisterPF" | "RegisterPJ") => {
+  const handleNavigate = (
+    path: "SignIn" | "RegisterPF" | "RegisterPJ" | "Home"
+  ) => {
     navigation.navigate(path);
   };
 
@@ -49,7 +51,7 @@ const SignIn: React.FC = ({ navigation }: SignInProps) => {
 
         <S.Wrapper>
           <S.Text>Já é cadastrado?</S.Text>
-          <S.Button>
+          <S.Button onPress={() => handleNavigate("Home")}>
             <S.Text
               style={{
                 color: theme.COLORS.GOLD,

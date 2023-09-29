@@ -2,6 +2,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import SignIn from "../screens/SignIn";
 import RegisterPF from "../screens/RegisterPF";
 import RegisterPJ from "../screens/RegisterPJ";
+import Home from "../screens/Home";
 
 export type RootStackParamList = {
   SignIn: undefined;
@@ -23,6 +24,7 @@ export const StackRoutes: React.FC = () => {
       <Screen name="SignIn" component={SignIn} />
       <Screen name="RegisterPF" component={RegisterPF} />
       <Screen name="RegisterPJ" component={RegisterPJ} />
+      <Screen name="Home" component={Home} />
     </Navigator>
   );
 };
