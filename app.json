@@ -4,7 +4,7 @@
     "slug": "ideiaSolutionsApp",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./src/assets/ideialogo.png",
+    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./src/assets/splashScreen.png",
@@ -17,12 +17,18 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./src/assets/ideialogo.png",
+        "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.jeshuaben.ideiaSolutionsApp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "3b8e2c28-adec-46b7-939a-23093262e8eb"
+      }
     }
   }
 }

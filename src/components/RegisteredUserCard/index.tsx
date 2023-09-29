@@ -6,11 +6,11 @@ const RegisteredUserCard = ({ data }: TRegisteredUserCard) => {
 
   return (
     <S.Container>
-      <S.Title>{data.nome}</S.Title>
+      <S.Title>{"data.nome"}</S.Title>
       <S.Separator />
       <S.Wrapper>
         <S.HighlightWord>Documento:</S.HighlightWord>
-        <S.Value>{data.cpf}</S.Value>
+        <S.Value>{"data.cpf"}</S.Value>
       </S.Wrapper>
     </S.Container>
   );
