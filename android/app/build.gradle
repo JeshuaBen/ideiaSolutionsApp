@@ -81,7 +81,7 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.ideiasolutionsapp"
+    namespace 'com.jeshuaben.ideiaSolutionsApp'
     defaultConfig {
         applicationId 'com.jeshuaben.ideiaSolutionsApp'
         minSdkVersion rootProject.ext.minSdkVersion
