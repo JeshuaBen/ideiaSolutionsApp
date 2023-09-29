@@ -3,13 +3,14 @@ export default {
     BLUE500: "#011b66",
     BLUE50: "#9190b3",
 
-    gray300: "#B1ACCA",
-    GRAY500: "#828392",
-
     GRAY100: "#ebebed",
+    GRAY300: "#B1ACCA",
+    GRAY500: "#828392",
+    GRAY600: "#999999",
 
     WHITE: "#FFF",
     BLACK: "#020202",
+    GOLD: "#F9A603",
   },
 
   FONT_FAMILY: {

@@ -7,8 +7,8 @@
     "icon": "./src/assets/ideialogo.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./src/assets/ideialogo.png",
-      "resizeMode": "contain",
+      "image": "./src/assets/splashScreen.png",
+      "resizeMode": "cover",
       "backgroundColor": "#011b66"
     },
     "assetBundlePatterns": ["**/*"],
