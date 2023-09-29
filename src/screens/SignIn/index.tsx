@@ -38,7 +38,12 @@ const SignIn: React.FC = ({ navigation }: SignInProps) => {
         >
           <Ionicons name="person" size={24} color={theme.COLORS.GOLD} />
         </Button>
-        <Button text="Cadastrar como PJ">
+        <Button
+          text="Cadastrar como PJ"
+          onPress={() => {
+            handleNavigate("RegisterPJ");
+          }}
+        >
           <FontAwesome name="building" size={24} color={theme.COLORS.GOLD} />
         </Button>
 

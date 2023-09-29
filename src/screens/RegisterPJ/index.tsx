@@ -5,16 +5,16 @@ import { useTheme } from "styled-components";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
-  RegistryPFData,
-  registryPfSchema,
-} from "../../validations/registryPfSchema";
-import RegisterPfForm from "./components/RegisterPfForm";
-import { RegisterPFScreenProps } from "./types";
+  RegistryPJData,
+  registryPJSchema,
+} from "../../validations/registryPJSchema";
+import RegisterPJForm from "./components/RegisterPJForm";
+import { RegistryPjScreenProps } from "./types";
 
-const RegisterPF = ({ navigation }: RegisterPFScreenProps) => {
+const RegisterPJ = ({ navigation }: RegistryPjScreenProps) => {
   const { control, register, formState, handleSubmit } =
-    useForm<RegistryPFData>({
-      resolver: zodResolver(registryPfSchema),
+    useForm<RegistryPJData>({
+      resolver: zodResolver(registryPJSchema),
     });
 
   const theme = useTheme();
@@ -32,7 +32,7 @@ const RegisterPF = ({ navigation }: RegisterPFScreenProps) => {
         <S.Title>Cadastrar Pessoa Física</S.Title>
       </S.HeaderContainer>
 
-      <RegisterPfForm
+      <RegisterPJForm
         control={control}
         formState={formState}
         handleSubmit={handleSubmit}
@@ -41,4 +41,4 @@ const RegisterPF = ({ navigation }: RegisterPFScreenProps) => {
   );
 };
 
-export default RegisterPF;
+export default RegisterPJ;
